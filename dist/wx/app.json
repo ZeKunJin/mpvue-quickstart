@@ -1,0 +1,74 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/home/ad/index",
+    "pages/search/result/index",
+    "pages/require/index",
+    "pages/require/detail/index",
+    "pages/require/supply/index",
+    "pages/require/complete/index",
+    "pages/require/create/index",
+    "pages/require/region/index",
+    "pages/require/map/index",
+    "pages/require/agreement/index",
+    "pages/require/comment/index",
+    "pages/require/comment/create/index",
+    "pages/mine/index",
+    "pages/mine/account/index",
+    "pages/mine/org/index",
+    "pages/mine/org/detail/index",
+    "pages/mine/require/index",
+    "pages/mine/require/detail/index",
+    "pages/mine/require/edit/index",
+    "pages/mine/require/region/index",
+    "pages/mine/require/map/index",
+    "pages/mine/supply/index",
+    "pages/mine/help/index",
+    "pages/org/index",
+    "pages/org/create/index",
+    "pages/org/audit/index",
+    "pages/org/apply/index",
+    "pages/login/index",
+    "pages/register/index",
+    "pages/register/agreement/index",
+    "pages/search/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "红哨子",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "backgroundColor": "#ffffff",
+    "selectedColor": "#333333",
+    "borderStyle": "white",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/home/index",
+        "iconPath": "static/tabs/home.png",
+        "selectedIconPath": "static/tabs/home-active.png"
+      },
+      {
+        "text": "需求",
+        "pagePath": "pages/require/index",
+        "iconPath": "static/tabs/require.png",
+        "selectedIconPath": "static/tabs/require-active.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/mine/index",
+        "iconPath": "static/tabs/mine.png",
+        "selectedIconPath": "static/tabs/mine-active.png"
+      }
+    ],
+    "position": "bottom"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "subPackages": []
+}

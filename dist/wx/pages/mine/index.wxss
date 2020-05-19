@@ -1,0 +1,48 @@
+@import "../../common/vendor.wxss";
+
+.mine.data-v-07af3654 {
+  background-color: #ffffff;
+}
+.mine .block.data-v-07af3654 {
+  position: relative;
+  background-color: #ffffff;
+  padding: 20rpx 32rpx;
+}
+.mine .login-tag.data-v-07af3654 {
+  position: absolute;
+  top: 50%;
+  transform: translate(20rpx, -50%);
+}
+.mine .login-text.data-v-07af3654 {
+  color: #E61F1C;
+  margin: 10rpx 48rpx;
+  font-weight: 500;
+}
+.mine .icon.data-v-07af3654 {
+  width: 44rpx;
+  height: 44rpx;
+  margin-right: 16rpx;
+}
+.mine .info-text.data-v-07af3654 {
+  position: absolute;
+  top: 50%;
+  transform: translate(32rpx, -50%);
+  display: inline;
+}
+.mine .info-text .name.data-v-07af3654 {
+  font-size: 32rpx;
+  color: #323233;
+}
+.mine .info-text .org-text.data-v-07af3654 {
+  font-size: 28rpx;
+  color: #E61F1C;
+  margin: 6rpx 48rpx;
+}
+.mine .unread.data-v-07af3654 {
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 50%;
+  background-color: red;
+  margin-left: 16rpx;
+  align-items: center;
+}

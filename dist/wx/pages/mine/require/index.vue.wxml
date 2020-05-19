@@ -1,0 +1,55 @@
+<import src="/components/Empty/index.vue.wxml" /><template name="0a1a8a48">
+  <view class="_div data-v-499d44ac mine-require">
+    <block wx:if="{{!loading}}">
+      <scroll-view wx:if="{{requireList.length > 0}}" scroll-y="{{true}}" bindscrolltolower="handleProxy" lower-threshold="178" style="height: 100vh" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_scroll-view data-v-499d44ac">
+        <view class="_div data-v-499d44ac container" bindtap="handleProxy" data-eventid="{{'2_'+index}}" data-comkey="{{$k}}" wx:for="{{requireList}}" wx:for-index="index" wx:for-item="require">
+          <view class="_div data-v-499d44ac img" style=" {{'background: url(' + require.cover + ') no-repeat center/cover'}}">
+            <view wx:if="{{require.isDefaultCover === '2'}}" class="_div data-v-499d44ac cover-container">
+              <view class="_div data-v-499d44ac ellipsis">{{ require.typeName }}</view>
+              <view class="_div data-v-499d44ac">需求对接</view>
+            </view>
+          </view>
+          <view style="position: relative" class="_div data-v-499d44ac">
+            <view class="_div data-v-499d44ac title">
+              {{ require.title }}
+            </view>
+            <view class="_div data-v-499d44ac desc">
+              <view class="_div data-v-499d44ac scale"><label wx:if="{{require.quantizationType === '1'}}" class="_span data-v-499d44ac"> 进度: {{ require.scale }}% </label><label wx:else class="_span data-v-499d44ac"> 状态: {{ require.status }}
+                </label></view>
+              <view class="_div data-v-499d44ac date"><label style="margin-right: 8px" class="_span data-v-499d44ac">{{ require.createTime }}</label> 发布 </view>
+            </view>
+          </view>
+          <van-icon wx:if="{{require.status === '上架' || require.status === '下架-未对接'}}" name="edit" class="_van-icon data-v-499d44ac edit-icon" size="20" color="#666"></van-icon>
+          <van-icon catchtap="handleProxy" name="friends-o" class="_van-icon data-v-499d44ac member-icon" size="20" color="#666" data-eventid="{{'0_'+index}}" data-comkey="{{$k}}"></van-icon>
+          <view class="_div data-v-499d44ac edit">
+            <van-button color="#F68725" size="mini" round catchtap="handleProxy" data-eventid="{{'1_'+index}}" data-comkey="{{$k}}" class="_van-button data-v-499d44ac">
+              <view style="margin: 0 8px" class="_div data-v-499d44ac"> 需求状态编辑 </view>
+            </van-button>
+          </view>
+        </view>
+        <view style="width: 100vw; height: 128px; background-color: #ffffff" class="_div data-v-499d44ac"></view>
+      </scroll-view>
+      <view wx:else style="padding: 64px 0" class="_div data-v-499d44ac"><template text="暂未发布需求" data="{{...$root[$kk+'3'], $root}}" is="5533befc"></template></view>
+    </block>
+    <view class="_div data-v-499d44ac bottom">
+      <van-button bindtap="handleProxy" round color="#E61F1C" data-eventid="{{'4'}}" data-comkey="{{$k}}" class="_van-button data-v-499d44ac">
+        <view style="margin: 0 32px" class="_div data-v-499d44ac"> 发布需求 </view>
+      </van-button>
+    </view>
+    <van-dialog use-slot show="{{showScale}}" show-cancel-button bindclose="handleProxy" bindconfirm="handleProxy" title="完成度" data-eventid="{{'6'}}" data-comkey="{{$k}}" class="_van-dialog data-v-499d44ac">
+      <view class="_div data-v-499d44ac slider">
+        <van-slider value="{{currSelected.scale}}" bindchange="handleProxy" use-button-slot active-color="#E61F1C" data-eventid="{{'5'}}" data-comkey="{{$k}}" class="_van-slider data-v-499d44ac">
+          <view slot="button" class="_div data-v-499d44ac button">
+            {{ currSelected.scale }}% </view>
+        </van-slider>
+      </view>
+    </van-dialog>
+    <van-dialog id="van-dialog" class="_van-dialog data-v-499d44ac"></van-dialog>
+    <van-popup show="{{showStatus}}" position="bottom" bindclose="handleProxy" data-eventid="{{'8'}}" data-comkey="{{$k}}" class="_van-popup data-v-499d44ac">
+      <van-picker class="_van-picker data-v-499d44ac status-picker" columns="{{columns}}" show-toolbar bindconfirm="handleProxy" bindchange="handleProxy" bindcancel="handleProxy" data-eventid="{{'7'}}" data-comkey="{{$k}}"></van-picker>
+    </van-popup>
+    <van-popup show="{{showAssign}}" position="bottom" bindclose="handleProxy" data-eventid="{{'10'}}" data-comkey="{{$k}}" class="_van-popup data-v-499d44ac">
+      <van-picker columns="{{assignList}}" show-toolbar bindconfirm="handleProxy" bindcancel="handleProxy" data-eventid="{{'9'}}" data-comkey="{{$k}}" class="_van-picker data-v-499d44ac"></van-picker>
+    </van-popup>
+  </view>
+</template>

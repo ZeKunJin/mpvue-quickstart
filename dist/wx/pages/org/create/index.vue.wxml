@@ -1,0 +1,47 @@
+<import src="/components/Uploader/index.vue.wxml" /><template name="2fe4438c">
+  <view class="_div data-v-771ec7ec org-create">
+    <view style="margin-bottom: 128px" class="_div data-v-771ec7ec">
+      <van-cell-group border="{{false}}" class="_van-cell-group data-v-771ec7ec">
+        <van-field required readonly disabled value="{{orgTypeText}}" bindtap="handleProxy" input-align="right" is-link="{{orgInfo.type ? false: true}}" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_van-field data-v-771ec7ec">
+          <view slot="label" class="_div data-v-771ec7ec org-type"> 组织类型 <van-icon name="warning-o" catchtap="handleProxy" style="margin-left: 4px" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_van-icon data-v-771ec7ec"></van-icon>
+          </view>
+        </van-field>
+        <van-field label="联系人" required value="{{orgInfo.contactPerson}}" placeholder="请输入联系人" input-align="right" bindchange="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_van-field data-v-771ec7ec"></van-field>
+        <van-field label="联系方式" required value="{{orgInfo.contactInfo}}" placeholder="请输入联系方式" input-align="right" bindchange="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_van-field data-v-771ec7ec"></van-field>
+        <van-field label="所属区域" required disabled readonly input-align="right" value="{{orgAreaText}}" bindtap="handleProxy" is-link="{{orgInfo.area ? false: true}}" data-eventid="{{'4'}}" data-comkey="{{$k}}" class="_van-field data-v-771ec7ec"></van-field>
+        <block wx:if="{{orgInfo.type}}">
+          <block wx:for="{{orgInput[orgInfo.type]}}" wx:for-index="index" wx:for-item="item">
+            <van-field wx:if="{{item.type === 'text'}}" key="{{index}}" label="{{item.label}}" value="{{orgInfo[item.name]}}" placeholder="{{item.placeholder || '请输入' + item.label}}" input-align="right" required bindchange="handleProxy" data-eventid="{{'5_'+index}}" data-comkey="{{$k}}" class="_van-field data-v-771ec7ec"></van-field>
+            <block wx:if="{{item.type === 'file'}}">
+              <van-field label="{{item.label}}" disabled readonly required="{{item.required}}" input-align="right" title-width="256px" border="{{false}}" class="_van-field data-v-771ec7ec"></van-field>
+              <view style="padding: 10px 16px; padding-top: 0; background-color: #ffffff" class="_div data-v-771ec7ec"><template bindafterRead="handleProxy" binddelete="handleProxy" data-eventid="{{'6_'+index}}" data-comkey="{{$k}}" data="{{...$root[$kk+'7_'+index], $root}}" is="281da4b5"></template></view>
+            </block>
+          </block>
+        </block>
+      </van-cell-group>
+    </view>
+    <view class="_div data-v-771ec7ec bottom">
+      <van-row gutter="20" class="_van-row data-v-771ec7ec">
+        <van-col span="12" style="text-align: right" class="_van-col data-v-771ec7ec cancel-button">
+          <van-button bindtap="handleProxy" round data-eventid="{{'7'}}" data-comkey="{{$k}}" class="_van-button data-v-771ec7ec">
+            <view style="width: 128px" class="_div data-v-771ec7ec">取消</view>
+          </van-button>
+        </van-col>
+        <van-col span="12" style="text-align: left" class="_van-col data-v-771ec7ec next-button">
+          <van-button bindtap="handleProxy" round color="#E61F1C" data-eventid="{{'8'}}" data-comkey="{{$k}}" class="_van-button data-v-771ec7ec">
+            <view style="width: 128px" class="_div data-v-771ec7ec">下一步</view>
+          </van-button>
+        </van-col>
+      </van-row>
+    </view>
+    <van-popup show="{{showType}}" position="bottom" bindclose="handleProxy" data-eventid="{{'10'}}" data-comkey="{{$k}}" class="_van-popup data-v-771ec7ec">
+      <van-picker columns="{{orgTypeConstants}}" show-toolbar bindconfirm="handleProxy" bindcancel="handleProxy" data-eventid="{{'9'}}" data-comkey="{{$k}}" class="_van-picker data-v-771ec7ec"></van-picker>
+    </van-popup>
+    <van-popup show="{{showArea}}" position="bottom" bindclose="handleProxy" data-eventid="{{'12'}}" data-comkey="{{$k}}" class="_van-popup data-v-771ec7ec">
+      <van-area area-list="{{areaList}}" bindconfirm="handleProxy" bindcancel="handleProxy" data-eventid="{{'11'}}" data-comkey="{{$k}}" class="_van-area data-v-771ec7ec"></van-area>
+    </van-popup>
+    <van-dialog use-slot show="{{showTypeDesc}}" bindconfirm="handleProxy" data-eventid="{{'13'}}" data-comkey="{{$k}}" class="_van-dialog data-v-771ec7ec">
+      <view class="_div data-v-771ec7ec type-desc"> 社区居委会：<view class="_br data-v-771ec7ec"></view> 备注定义：社区居民委员会是居民自我管理、自我教育、自我服务的基层群众性自治组织。<view class="_br data-v-771ec7ec"></view> 注册信息：<view class="_br data-v-771ec7ec"></view> *社区（居委）名称：/*社区（居委）地址：/*社区（居委）联系人：<view class="_br data-v-771ec7ec"></view> /*社区（居委）联系方式：<view class="_br data-v-771ec7ec"></view> 社会组织：<view class="_br data-v-771ec7ec"></view> 备注定义：社会组织是指相对于政党、政府等传统组织形态之外的各类民进性的社会组织，主要包括社会团体、基金会、民办非企业单位、部分中介组织以及社区活动团体。<view class="_br data-v-771ec7ec"></view> 注册信息：<view class="_br data-v-771ec7ec"></view> *组织名称：/*注册地址：/*登记证书：/*组织联系人：/*组织联系方式：<view class="_br data-v-771ec7ec"></view> 社区社会组织：<view class="_br data-v-771ec7ec"></view> 备注定义：是指由社区组织或个人在社区（镇、街道）范围内单独或联合举办的、在社区范围内开展活动的、满足社区居民不同需求的民间自发组织。<view class="_br data-v-771ec7ec"></view> 注册信息：<view class="_br data-v-771ec7ec"></view> *组织名称：/*所属社区：/*备案证或者负责人身份证号：/组织联系人：<view class="_br data-v-771ec7ec"></view> /组织联系方式：<view class="_br data-v-771ec7ec"></view> 社区居民：<view class="_br data-v-771ec7ec"></view> 备注定义：具有本社区房产的自然人业主或者居住在本社区的自然人。<view class="_br data-v-771ec7ec"></view> *姓名：/*性别：/*身份证号：/*联系方式： </view>
+    </van-dialog>
+  </view>
+</template>

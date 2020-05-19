@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "对接清单",
+  "usingComponents": {
+    "van-row": "/static/vant/row/index",
+    "van-col": "/static/vant/col/index"
+  }
+}

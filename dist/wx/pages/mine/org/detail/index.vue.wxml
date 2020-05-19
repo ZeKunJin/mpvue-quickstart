@@ -1,0 +1,36 @@
+<import src="/components/Empty/index.vue.wxml" /><template name="f446b84a">
+  <view class="_div data-v-04cfefea mine-org-detail">
+    <van-tabs active="{{active}}" bindchange="handleProxy" color="#E61F1C" data-eventid="{{'5'}}" data-comkey="{{$k}}" class="_van-tabs data-v-04cfefea">
+      <van-tab title="成员列表" name="member" class="_van-tab data-v-04cfefea">
+        <block wx:if="{{!loading}}">
+          <scroll-view wx:if="{{member.list.length > 0}}" style="height: calc(100vh - 44px)" scroll-y="{{true}}" bindscrolltolower="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_scroll-view data-v-04cfefea">
+            <van-swipe-cell wx:key="member.userId" key="{{member.userId}}" right-width="{{65}}" wx:for="{{member.list}}" wx:for-index="index" wx:for-item="member" class="_van-swipe-cell data-v-04cfefea">
+              <van-cell bindtap="handleProxy" data-eventid="{{'0_'+index}}" data-comkey="{{$k}}" class="_van-cell data-v-04cfefea">
+                <view slot="title" class="_div data-v-04cfefea">
+                  {{ member.userName }}
+                  <van-tag wx:if="{{member.userRole === 'admin' || member.userRole === 'org_admin'}}" color="#fbe7f0" text-color="#E61F1C" style="margin-left: 8px" class="_van-tag data-v-04cfefea">管理员</van-tag>
+                </view>
+              </van-cell>
+              <view slot="right" class="_div data-v-04cfefea del-container" bindtap="handleProxy" data-eventid="{{'1_'+index}}" data-comkey="{{$k}}"><label class="_span data-v-04cfefea">删除</label></view>
+            </van-swipe-cell>
+          </scroll-view>
+          <view wx:else style="margin: 64px 0" class="_div data-v-04cfefea"><template data="{{...$root[$kk+'3'], $root}}" is="5533befc"></template></view>
+        </block>
+      </van-tab>
+      <van-tab title="待审核" name="audit" wx:if="{{roles === 'admin' || roles === 'org_admin'}}" class="_van-tab data-v-04cfefea">
+        <block wx:if="{{!loading}}">
+          <scroll-view wx:if="{{audit.list.length > 0}}" class="_scroll-view data-v-04cfefea scroll" scroll-y="{{true}}" bindscrolltolower="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}">
+            <van-cell wx:key="audit.userId" key="{{audit.userId}}" wx:for="{{audit.list}}" wx:for-index="index" wx:for-item="audit" class="_van-cell data-v-04cfefea">
+              <view slot="title" class="_div data-v-04cfefea">
+                {{ audit.userName }}
+              </view>
+              <van-button bindtap="handleProxy" round size="mini" color="#EE4E8C1A" data-eventid="{{'3_'+index}}" data-comkey="{{$k}}" class="_van-button data-v-04cfefea"><label style="color: #E61F1C" class="_span data-v-04cfefea">审核</label></van-button>
+            </van-cell>
+          </scroll-view>
+          <view wx:else style="margin: 64px 0" class="_div data-v-04cfefea"><template data="{{...$root[$kk+'8'], $root}}" is="5533befc"></template></view>
+        </block>
+      </van-tab>
+    </van-tabs>
+    <van-dialog id="van-dialog" class="_van-dialog data-v-04cfefea"></van-dialog>
+  </view>
+</template>

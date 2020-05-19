@@ -1,0 +1,14 @@
+@import "./common/vendor.wxss";
+
+page,
+page {
+  background-color: #F7F8FA;
+}
+page {
+  background-color: #F7F8FA;
+}
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

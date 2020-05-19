@@ -1,0 +1,35 @@
+@import "../../../common/vendor.wxss";
+
+page {
+  background-color: #ffffff;
+}
+.mine-org .bottom {
+  position: fixed;
+  bottom: 64rpx;
+  text-align: center;
+  width: 100vw;
+}
+.mine-org .bottom .van-button {
+  box-shadow: 0 8rpx 16rpx 0 rgba(248, 110, 110, 0.25);
+}
+.mine-org .scroll {
+  height: 100vh;
+}
+.mine-org .icon-container {
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  margin-left: 8rpx;
+}
+.mine-org .audit-icon {
+  width: 32rpx;
+  height: 32rpx;
+}
+.mine-org .unread {
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 50%;
+  background-color: red;
+  margin-right: 16rpx;
+  align-items: center;
+}

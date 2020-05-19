@@ -1,0 +1,11 @@
+<template name="62955d54">
+  <view class="_div data-v-4e667326">
+    <view class="_div data-v-4e667326 top_toast">
+      <van-icon name="checked" class="_van-icon data-v-4e667326 icon_box"></van-icon>
+      <view class="_p data-v-4e667326">信息提交成功，需求发布方将会及时与您联系</view>
+    </view>
+    <view class="_div data-v-4e667326 btn_box">
+      <van-button round type="info" color="linear-gradient(90deg,rgba(241,83,80,1) 0%,rgba(248,110,110,1) 100%);" custom-style="width:300rpx;height:88rpx;box-shadow:0px 4px 4px 0px rgba(248,110,110,0.25);" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_van-button data-v-4e667326">返回首页 </van-button>
+    </view>
+  </view>
+</template>

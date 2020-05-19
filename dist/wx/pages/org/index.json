@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "加入/创建组织",
+  "usingComponents": {
+    "van-button": "/static/vant/button/index",
+    "van-search": "/static/vant/search/index",
+    "van-popup": "/static/vant/popup/index",
+    "van-icon": "/static/vant/icon/index",
+    "van-area": "/static/vant/area/index",
+    "van-cell": "/static/vant/cell/index",
+    "van-cell-group": "/static/vant/cell-group/index"
+  }
+}

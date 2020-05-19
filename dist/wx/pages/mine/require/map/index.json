@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "地图",
+  "usingComponents": {
+    "van-search": "/static/vant/search/index",
+    "van-popup": "/static/vant/popup/index",
+    "van-icon": "/static/vant/icon/index",
+    "van-area": "/static/vant/area/index",
+    "van-cell": "/static/vant/cell/index",
+    "van-cell-group": "/static/vant/cell-group/index"
+  }
+}

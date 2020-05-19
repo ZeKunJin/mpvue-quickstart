@@ -1,0 +1,8 @@
+@import "../../../common/vendor.wxss";
+
+.btn_box {
+  position: fixed;
+  bottom: 64rpx;
+  left: 50%;
+  margin-left: -150rpx;
+}

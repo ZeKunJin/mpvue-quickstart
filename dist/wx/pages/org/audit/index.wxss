@@ -1,0 +1,27 @@
+@import "../../../common/vendor.wxss";
+
+.org-audit {
+  background-color: #ffffff;
+  padding: 128rpx 0;
+  text-align: center;
+}
+.org-audit .text {
+  margin-top: 20rpx;
+}
+.org-audit .text .title {
+  font-size: 28rpx;
+}
+.org-audit .text .desc {
+  font-size: 24rpx;
+  color: #999999;
+  margin-top: 10rpx;
+}
+.org-audit .bottom {
+  position: fixed;
+  bottom: 64rpx;
+  text-align: center;
+  width: 100vw;
+}
+.org-audit .bottom .van-button {
+  box-shadow: 0 8rpx 16rpx 0 rgba(248, 110, 110, 0.25);
+}

@@ -1,0 +1,58 @@
+<template name="720343e8">
+  <view class="_div data-v-32844fd0 require">
+    <van-search shape="round" value="{{search}}" placeholder="请输入搜索关键词" bindsearch="handleProxy" bindchange="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_van-search data-v-32844fd0">
+      <view slot="label" class="_div data-v-32844fd0 area-text" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">
+        <view style="width: 48px" class="_div data-v-32844fd0 ellipsis">{{ areaText }}</view>
+        <van-icon name="arrow-down" class="_van-icon data-v-32844fd0 arrow-icon"></van-icon>
+      </view>
+    </van-search>
+    <view class="_div data-v-32844fd0 tool" bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}">
+      <image src="/static/icon/add.png" class="_img data-v-32844fd0 icon"></image>
+    </view>
+    <van-tabs active="{{active}}" border="{{false}}" color="#E61F1C" bindchange="handleProxy" bindonClick="handleProxy" data-eventid="{{'7'}}" data-comkey="{{$k}}" class="_van-tabs data-v-32844fd0">
+      <van-tab wx:key="index" key="{{index}}" name="{{stair.id}}" title="{{stair.remark}}" wx:for="{{stairs}}" wx:for-index="index" wx:for-item="stair" class="_van-tab data-v-32844fd0">
+        <view class="_div data-v-32844fd0 sidebar" style="width: 85px">
+          <van-sidebar active-key="{{activityKey}}" bindchange="handleProxy" data-eventid="{{'3_'+index}}" data-comkey="{{$k}}" class="_van-sidebar data-v-32844fd0">
+            <van-sidebar-item wx:key="_index" key="{{_index}}" title="{{item.label}}" wx:for="{{detailList}}" wx:for-index="_index" wx:for-item="item" class="_van-sidebar-item data-v-32844fd0"></van-sidebar-item>
+          </van-sidebar>
+        </view>
+        <view class="_div data-v-32844fd0 container" style="width: calc(100vw - 85px)">
+          <scroll-view wx:if="{{requirementList.length!==0}}" class="_scroll-view data-v-32844fd0 hei_box" scroll-y="true" bindscrolltoupper="handleProxy" bindscrolltolower="handleProxy" data-eventid="{{'6_'+index}}" data-comkey="{{$k}}">
+            <view class="_ul data-v-32844fd0">
+              <view wx:key="____index" key="{{____index}}" class="_li data-v-32844fd0 list_box" catchtap="handleProxy" style="position: relative" data-eventid="{{'5_'+index+'-'+____index}}" data-comkey="{{$k}}" wx:for="{{requirementList}}" wx:for-index="____index" wx:for-item="itemss">
+                <view class="_div data-v-32844fd0 list_image_box">
+                  <view class="_div data-v-32844fd0 img" style=" {{'background: url(' + itemss.cover + ') no-repeat center/cover'}}">
+                    <view wx:if="{{itemss.isDefaultCover === '2'}}" class="_div data-v-32844fd0 cover-container">
+                      <view class="_div data-v-32844fd0 ellipsis">{{ itemss.typeName }}</view>
+                      <view class="_div data-v-32844fd0">需求对接</view>
+                    </view>
+                  </view>
+                  <view class="_div data-v-32844fd0 urgent_box" wx:if="{{itemss.level === 2}}">急缺</view>
+                </view>
+                <view style="position: absolute; top: 10px; right: 16px; color: #999; font-size: 12px" class="_div data-v-32844fd0"> 浏览量: {{ itemss.browseTimes || 0 }}
+                </view>
+                <view class="_div data-v-32844fd0 list_right_box">
+                  <view class="_div data-v-32844fd0 first_box">
+                    <view style="word-wrap:break-word;" class="_p data-v-32844fd0">{{itemss.title}}</view>
+                  </view>
+                  <view class="_div data-v-32844fd0 last_box"><label class="_span data-v-32844fd0">{{itemss.createTime}}发布</label>
+                    <view style="position: absolute; right: 16px" class="_div data-v-32844fd0">
+                      <van-button round size="small" color="#F68725" custom-style="font-size:12px; height:44rpx" catchtap="handleProxy" data-eventid="{{'4_'+index+'-'+____index}}" data-comkey="{{$k}}" class="_van-button data-v-32844fd0">我要对接</van-button>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </scroll-view>
+          <view class="_div data-v-32844fd0 empty_box" wx:else>
+            <image src="/static/images/empty.png" class="_img data-v-32844fd0"></image> 暂无数据
+          </view>
+        </view>
+      </van-tab>
+    </van-tabs>
+    <van-popup show="{{showArea}}" position="bottom" bindclose="handleProxy" data-eventid="{{'9'}}" data-comkey="{{$k}}" class="_van-popup data-v-32844fd0">
+      <van-area area-list="{{areaList}}" bindconfirm="handleProxy" bindcancel="handleProxy" value="{{area}}" columns-placeholder="{{['请选择', '请选择', '请选择']}}" data-eventid="{{'8'}}" data-comkey="{{$k}}" class="_van-area data-v-32844fd0"></van-area>
+    </van-popup>
+    <van-dialog id="van-dialog" class="_van-dialog data-v-32844fd0"></van-dialog>
+  </view>
+</template>

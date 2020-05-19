@@ -1,0 +1,11 @@
+<template name="36d7e786">
+  <view class="_div data-v-673e2fb6 apply">
+    <image src="/static/images/apply.png" class="_img data-v-673e2fb6"></image>
+    <view class="_div data-v-673e2fb6 text"> 申请成功, 请等待组织审核 </view>
+    <view class="_div data-v-673e2fb6 bottom">
+      <van-button bindtap="handleProxy" round color="#E61F1C" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_van-button data-v-673e2fb6">
+        <view style="padding: 0 32px" class="_div data-v-673e2fb6"> 返回首页 </view>
+      </van-button>
+    </view>
+  </view>
+</template>

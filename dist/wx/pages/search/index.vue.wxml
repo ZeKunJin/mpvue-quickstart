@@ -1,0 +1,8 @@
+<template name="ba9a1fca">
+  <view class="_div data-v-8185d42a">
+    <van-search value="{{search}}" placeholder="请输入组织名称搜索对应需求" bindsearch="handleProxy" bindchange="handleProxy" shape="round" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_van-search data-v-8185d42a"></van-search>
+    <van-cell-group class="_van-cell-group data-v-8185d42a">
+      <van-cell wx:key="result.id" key="{{result.id}}" border="{{false}}" title="{{result.name}}" bindtap="handleProxy" data-eventid="{{'1_'+index}}" data-comkey="{{$k}}" wx:for="{{list}}" wx:for-index="index" wx:for-item="result" class="_van-cell data-v-8185d42a"></van-cell>
+    </van-cell-group>
+  </view>
+</template>

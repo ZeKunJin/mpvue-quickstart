@@ -1,0 +1,10 @@
+<template name="5533befc">
+  <view style="text-align: center" class="_div data-v-31967ccc">
+    <view class="_div data-v-31967ccc">
+      <image class="_img data-v-31967ccc empty-img" src="{{imgUrl}}" mode="widthFix"></image>
+    </view>
+    <view class="_div data-v-31967ccc empty-text">
+      {{ text }}
+    </view>
+  </view>
+</template>

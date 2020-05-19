@@ -1,0 +1,29 @@
+<template name="7018e9a4">
+  <view class="_div data-v-82791918 account">
+    <view style="background-color: #fff" class="_div data-v-82791918">
+      <view class="_div data-v-82791918 avatar">
+        <van-image round width="60" height="60" src="{{userInfo.avatar}}" class="_van-image data-v-82791918"></van-image>
+        <view class="_div data-v-82791918 name">
+          {{ userInfo.name }}
+        </view>
+      </view>
+      <van-cell-group border="{{false}}" class="_van-cell-group data-v-82791918">
+        <van-cell title="姓名" value="{{userInfo.name}}" class="_van-cell data-v-82791918"></van-cell>
+        <van-cell title="手机号" value="{{userInfo.phone}}" bindtap="handleProxy" is-link data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_van-cell data-v-82791918"></van-cell>
+      </van-cell-group>
+    </view>
+    <view style="margin-top: 10px" class="_div data-v-82791918">
+      <van-button bindtap="handleProxy" plain hairline size="large" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_van-button data-v-82791918">退出登录</van-button>
+    </view>
+    <van-dialog use-slot show="{{showEditPhone}}" show-cancel-button bindclose="handleProxy" bindconfirm="handleProxy" title="修改手机" data-eventid="{{'5'}}" data-comkey="{{$k}}" class="_van-dialog data-v-82791918">
+      <view class="_div data-v-82791918 dialog-container">
+        <view class="_div data-v-82791918 input"><input value="{{phone}}" placeholder="请输入手机号" placeholder-class="placeholder" bindinput="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_input data-v-82791918" /></view>
+        <view class="_div data-v-82791918 input" style="margin-top: 20px; position: relative"><input value="{{code}}" placeholder="请输入验证码" placeholder-class="placeholder" bindinput="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_input data-v-82791918" />
+          <view wx:if="{{!disabled}}" class="_div data-v-82791918 code-text" bindtap="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}"> 发送验证码 </view>
+          <view wx:else class="_div data-v-82791918 code-text" style="color: #999"> ({{ second }}s) </view>
+        </view>
+      </view>
+    </van-dialog>
+    <van-dialog id="van-dialog" class="_van-dialog data-v-82791918"></van-dialog>
+  </view>
+</template>

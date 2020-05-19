@@ -1,0 +1,52 @@
+<template name="66af0b06">
+  <view class="_div data-v-07af3654 mine">
+    <view class="_div data-v-07af3654 block">
+      <van-image round width="60px" height="60px" src="{{isLogin ? userInfo.avatar : ''}}" use-error-slot class="_van-image data-v-07af3654">
+        <van-icon slot="error" name="user-o" class="_van-icon data-v-07af3654"></van-icon>
+      </van-image>
+      <van-tag wx:if="{{!isLogin}}" bindtap="handleProxy" class="_van-tag data-v-07af3654 login-tag" round size="large" color="#F7F7F7" data-eventid="{{'2'}}" data-comkey="{{$k}}">
+        <view class="_div data-v-07af3654 login-text"> 登录/注册 </view>
+      </van-tag>
+      <view wx:else class="_div data-v-07af3654 info-text">
+        <view class="_div data-v-07af3654 name">
+          {{ userInfo.name }}
+        </view>
+        <view style="margin-top: 5px" class="_div data-v-07af3654">
+          <van-tag round size="large" color="{{isOrg ? '#fbe7f0' : '#F7F7F7'}}" class="_van-tag data-v-07af3654">
+            <image wx:if="{{isOrg}}" src="/static/icon/logo.png" style="width: 20px; height: 20px" class="_img data-v-07af3654"></image>
+            <image wx:else src="/static/icon/logo-inactive.png" style="width: 20px; height: 20px" class="_img data-v-07af3654"></image>
+            <view class="_div data-v-07af3654 org-text">
+              <block wx:if="{{isOrg}}" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}">
+                <view style="width: 128px" class="_div data-v-07af3654 ellipsis">
+                  {{ orgName }}
+                </view>
+              </block><label wx:else bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_span data-v-07af3654"> 加入组织/创建主体 </label>
+            </view>
+          </van-tag>
+        </view>
+      </view>
+    </view>
+    <van-cell-group border="{{false}}" class="_van-cell-group data-v-07af3654">
+      <van-cell bindtap="handleProxy" is-link data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_van-cell data-v-07af3654">
+        <image slot="icon" src="/static/icon/org.png" class="_img data-v-07af3654 icon"></image>
+        <view slot="title" style="display: flex; align-items: center" class="_div data-v-07af3654"> 我的组织 <view wx:if="{{hasApply}}" class="_div data-v-07af3654 unread"></view>
+        </view>
+      </van-cell>
+      <van-cell title="我的需求" bindtap="handleProxy" is-link data-eventid="{{'4'}}" data-comkey="{{$k}}" class="_van-cell data-v-07af3654">
+        <image slot="icon" src="/static/icon/require.png" class="_img data-v-07af3654 icon"></image>
+      </van-cell>
+      <van-cell title="我的对接" bindtap="handleProxy" is-link data-eventid="{{'5'}}" data-comkey="{{$k}}" class="_van-cell data-v-07af3654">
+        <image slot="icon" src="/static/icon/supply.png" class="_img data-v-07af3654 icon"></image>
+      </van-cell>
+      <van-cell title="账号信息" bindtap="handleProxy" is-link data-eventid="{{'6'}}" data-comkey="{{$k}}" class="_van-cell data-v-07af3654">
+        <image slot="icon" src="/static/icon/account.png" class="_img data-v-07af3654 icon"></image>
+      </van-cell>
+      <van-cell title="联系我们" bindtap="handleProxy" is-link data-eventid="{{'7'}}" data-comkey="{{$k}}" class="_van-cell data-v-07af3654">
+        <image slot="icon" src="/static/icon/phone.png" class="_img data-v-07af3654 icon"></image>
+      </van-cell>
+      <van-cell title="帮助" bindtap="handleProxy" is-link data-eventid="{{'8'}}" data-comkey="{{$k}}" class="_van-cell data-v-07af3654">
+        <image slot="icon" src="/static/icon/question.png" class="_img data-v-07af3654 icon"></image>
+      </van-cell>
+    </van-cell-group>
+  </view>
+</template>

@@ -1,0 +1,48 @@
+@import "../../common/vendor.wxss";
+
+page {
+  background-color: #ffffff;
+}
+.register-bg {
+  width: 100vw;
+  height: 240rpx;
+}
+.register .block {
+  padding: 80rpx 64rpx;
+}
+.register .title .desc {
+  font-size: 40rpx;
+  font-weight: 500;
+}
+.register .title .name {
+  font-size: 48rpx;
+  font-weight: 500;
+}
+.register .input {
+  border-bottom: 2rpx solid #F3F3F5;
+  padding: 10rpx 8rpx;
+}
+.register .input .code-text {
+  position: absolute;
+  color: #E61F1C;
+  font-size: 28rpx;
+  right: 8rpx;
+  top: 10rpx;
+  z-index: 2;
+}
+.register .button {
+  margin-top: 88rpx;
+  text-align: center;
+}
+.register .login-text {
+  text-align: center;
+  font-size: 24rpx;
+  margin-top: 40rpx;
+  color: #666666;
+}
+.register .button .van-button {
+  box-shadow: 0 8rpx 16rpx 0 rgba(248, 110, 110, 0.25);
+}
+.placeholder {
+  color: #C1C1C1;
+}

@@ -1,0 +1,14 @@
+<template name="727c1bb3">
+  <view class="_div data-v-ba3b383a org-audit">
+    <van-icon size="60" name="checked" color="#67c13e" class="_van-icon data-v-ba3b383a"></van-icon>
+    <view class="_div data-v-ba3b383a text">
+      <view class="_div data-v-ba3b383a title"> 提交审核 </view>
+      <view class="_div data-v-ba3b383a desc"> 正在审核, 请稍后 </view>
+    </view>
+    <view class="_div data-v-ba3b383a bottom">
+      <van-button bindtap="handleProxy" round color="#E61F1C" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_van-button data-v-ba3b383a">
+        <view style="padding: 0 32px" class="_div data-v-ba3b383a"> 返回首页 </view>
+      </van-button>
+    </view>
+  </view>
+</template>

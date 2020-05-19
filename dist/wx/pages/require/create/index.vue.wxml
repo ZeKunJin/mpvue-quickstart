@@ -1,0 +1,64 @@
+<import src="/components/Uploader/index.vue.wxml" />
+<import src="/components/Editor/index.vue.wxml" /><template name="5bed51d9">
+  <view class="_div data-v-abc6b0ae create-require">
+    <view class="_div data-v-abc6b0ae container">
+      <van-cell-group border="{{false}}" class="_van-cell-group data-v-abc6b0ae">
+        <van-cell use-label-slot class="_van-cell data-v-abc6b0ae">
+          <view slot="title" class="_div data-v-abc6b0ae"> 需求封面 </view>
+          <view style="margin-top: 9px" class="_div data-v-abc6b0ae"><template value="cover" bindafterRead="handleProxy" binddelete="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'0'], $root}}" is="281da4b5"></template></view>
+        </van-cell>
+        <van-field label="需求标题" required value="{{requirement.title}}" placeholder="请输入需求标题" input-align="right" bindchange="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_van-field data-v-abc6b0ae"></van-field>
+        <van-field label="需求方" required value="{{requirement.requirementOrgName}}" placeholder="请输入需求方" input-align="right" bindchange="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_van-field data-v-abc6b0ae"></van-field>
+        <van-field label="联系人" required value="{{requirement.contactPerson}}" placeholder="请输入联系人" input-align="right" bindchange="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_van-field data-v-abc6b0ae"></van-field>
+        <van-field label="联系方式" required value="{{requirement.contactInfo}}" placeholder="请输入联系方式" input-align="right" bindchange="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}" class="_van-field data-v-abc6b0ae"></van-field>
+        <van-field label="发布方" readonly disabled required value="{{orgText}}" input-align="right" bindtap="handleProxy" is-link="{{requirement.orgId ? false : true}}" data-eventid="{{'5'}}" data-comkey="{{$k}}" class="_van-field data-v-abc6b0ae"></van-field>
+        <van-field label="发布有效期" readonly disabled required value="{{levelText}}" input-align="right" bindtap="handleProxy" is-link="{{requirement.level ? false : true}}" data-eventid="{{'6'}}" data-comkey="{{$k}}" class="_van-field data-v-abc6b0ae"></van-field>
+        <van-field label="需求类型" readonly disabled required input-align="right" value="{{typeText}}" bindtap="handleProxy" is-link="{{requirement.type ? false : true}}" data-eventid="{{'7'}}" data-comkey="{{$k}}" class="_van-field data-v-abc6b0ae"></van-field>
+        <van-field wx:if="{{requirement.type}}" readonly disabled required input-align="right" label="{{typeChildrenTitle + '类型'}}" value="{{typeChildrenText}}" bindtap="handleProxy" is-link="{{requirement.demandType ? false : true}}" data-eventid="{{'8'}}" data-comkey="{{$k}}" class="_van-field data-v-abc6b0ae"></van-field>
+        <van-field label="现状描述" required value="{{requirement.presentDescription}}" placeholder="请输入现状描述" input-align="right" bindchange="handleProxy" data-eventid="{{'9'}}" data-comkey="{{$k}}" class="_van-field data-v-abc6b0ae"></van-field>
+        <van-field label="需求目标" value="{{requirement.demandTarget}}" placeholder="请输入需求目标" input-align="right" bindchange="handleProxy" data-eventid="{{'10'}}" data-comkey="{{$k}}" class="_van-field data-v-abc6b0ae"></van-field>
+        <van-field label="需求人数" value="{{requirement.demandPeople}}" type="number" placeholder="请输入需求人数" input-align="right" bindchange="handleProxy" data-eventid="{{'11'}}" data-comkey="{{$k}}" class="_van-field data-v-abc6b0ae"></van-field>
+        <van-field label="人员资质/条件" title-width="128px" value="{{requirement.personResources}}" placeholder="请输入人员资质/条件" input-align="right" bindchange="handleProxy" data-eventid="{{'12'}}" data-comkey="{{$k}}" class="_van-field data-v-abc6b0ae"></van-field>
+        <van-field label="可提供资源" value="{{requirement.adviceResources}}" placeholder="请输入可提供资源" input-align="right" bindchange="handleProxy" data-eventid="{{'13'}}" data-comkey="{{$k}}" class="_van-field data-v-abc6b0ae"></van-field>
+        <van-field label="需求内容" required disabled readonly border="{{false}}" class="_van-field data-v-abc6b0ae"></van-field>
+        <view style="padding: 10px 16px; padding-top: 0" class="_div data-v-abc6b0ae"><template bindinput="handleProxy" ref="editor" data-eventid="{{'14'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'16'], $root}}" is="25d8eff4"></template></view>
+        <view style="width: 100vw; height: 128px; background-color: #fff" class="_div data-v-abc6b0ae"></view>
+      </van-cell-group>
+      <van-popup show="{{showOrg}}" position="bottom" bindclose="handleProxy" data-eventid="{{'16'}}" data-comkey="{{$k}}" class="_van-popup data-v-abc6b0ae">
+        <van-picker columns="{{orgList}}" show-toolbar bindconfirm="handleProxy" bindcancel="handleProxy" data-eventid="{{'15'}}" data-comkey="{{$k}}" class="_van-picker data-v-abc6b0ae"></van-picker>
+      </van-popup>
+      <van-popup show="{{showLevel}}" position="bottom" bindclose="handleProxy" data-eventid="{{'18'}}" data-comkey="{{$k}}" class="_van-popup data-v-abc6b0ae">
+        <van-picker columns="{{levelList}}" default-index="{{29}}" show-toolbar bindconfirm="handleProxy" bindcancel="handleProxy" data-eventid="{{'17'}}" data-comkey="{{$k}}" class="_van-picker data-v-abc6b0ae"></van-picker>
+      </van-popup>
+      <van-popup show="{{showType}}" position="bottom" bindclose="handleProxy" data-eventid="{{'20'}}" data-comkey="{{$k}}" class="_van-popup data-v-abc6b0ae">
+        <van-picker columns="{{typeList}}" show-toolbar bindconfirm="handleProxy" bindcancel="handleProxy" data-eventid="{{'19'}}" data-comkey="{{$k}}" class="_van-picker data-v-abc6b0ae"></van-picker>
+      </van-popup>
+      <van-popup show="{{showTypeChildren}}" position="bottom" bindclose="handleProxy" data-eventid="{{'24'}}" data-comkey="{{$k}}" class="_van-popup data-v-abc6b0ae">
+        <van-checkbox-group value="{{typeChildrenResult}}" bindchange="handleProxy" data-eventid="{{'23'}}" data-comkey="{{$k}}" class="_van-checkbox-group data-v-abc6b0ae">
+          <van-cell-group class="_van-cell-group data-v-abc6b0ae">
+            <van-cell wx:key="item.value" key="{{item.value}}" title="{{item.text}}" clickable bindtap="handleProxy" data-eventid="{{'22_'+index}}" data-comkey="{{$k}}" wx:for="{{typeChildrenList}}" wx:for-index="index" wx:for-item="item" class="_van-cell data-v-abc6b0ae">
+              <van-checkbox catchtap="handleProxy" slot="right-icon" name="{{item.value + '/' + item.text}}" checked-color="#E61F1C" data-eventid="{{'21_'+index}}" data-comkey="{{$k}}" class="_van-checkbox data-v-abc6b0ae {{'checkboxes-' + index}}"></van-checkbox>
+            </van-cell>
+          </van-cell-group>
+        </van-checkbox-group>
+      </van-popup>
+    </view>
+    <view class="_div data-v-abc6b0ae bottom">
+      <van-row gutter="20" class="_van-row data-v-abc6b0ae">
+        <van-col span="12" style="text-align: right" class="_van-col data-v-abc6b0ae cancel-button">
+          <van-button bindtap="handleProxy" round data-eventid="{{'25'}}" data-comkey="{{$k}}" class="_van-button data-v-abc6b0ae">
+            <view style="width: 128px" class="_div data-v-abc6b0ae">取消</view>
+          </van-button>
+        </van-col>
+        <van-col span="12" style="text-align: left" class="_van-col data-v-abc6b0ae next-button">
+          <van-button wx:if="{{!disabled}}" bindtap="handleProxy" round color="#E61F1C" data-eventid="{{'27'}}" data-comkey="{{$k}}" class="_van-button data-v-abc6b0ae">
+            <view style="width: 128px" class="_div data-v-abc6b0ae">下一步</view>
+          </van-button>
+          <van-button wx:else bindtap="handleProxy" round color="#E61F1C" data-eventid="{{'26'}}" data-comkey="{{$k}}" class="_van-button data-v-abc6b0ae">
+            <view style="width: 128px" class="_div data-v-abc6b0ae">加入/创建主体</view>
+          </van-button>
+        </van-col>
+      </van-row>
+    </view>
+  </view>
+</template>

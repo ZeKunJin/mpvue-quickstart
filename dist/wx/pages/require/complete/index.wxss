@@ -1,0 +1,26 @@
+@import "../../../common/vendor.wxss";
+
+.top_toast.data-v-4e667326 {
+  padding-top: 68rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+}
+.top_toast .icon_box.data-v-4e667326 {
+  font-size: 72rpx;
+  color: #69C03F;
+}
+.top_toast>._p.data-v-4e667326 {
+  font-size: 24rpx;
+  font-weight: 400;
+  color: #999;
+  line-height: 34rpx;
+  padding: 28rpx 0 88rpx;
+}
+.btn_box.data-v-4e667326 {
+  position: fixed;
+  bottom: 100rpx;
+  left: 50%;
+  margin-left: -150rpx;
+}
