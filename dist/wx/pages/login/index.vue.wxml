@@ -4,7 +4,7 @@
     <view class="_div data-v-3726a71c block">
       <view class="_div data-v-3726a71c title">
         <view class="_div data-v-3726a71c desc"> 欢迎来到 </view>
-        <view class="_div data-v-3726a71c name"> 社区微心愿 </view>
+        <view class="_div data-v-3726a71c name"> 社区对接平台 </view>
       </view>
       <view style="margin-top: 30px" class="_div data-v-3726a71c">
         <view class="_div data-v-3726a71c input"><input value="{{phone}}" placeholder="请输入手机号" placeholder-class="placeholder" bindinput="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_input data-v-3726a71c" /></view>

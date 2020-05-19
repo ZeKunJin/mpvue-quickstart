@@ -8,7 +8,7 @@
           欢迎来到
         </div>
         <div class="name">
-          社区微心愿
+          社区对接平台
         </div>
       </div>
 

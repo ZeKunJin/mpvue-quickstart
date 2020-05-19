@@ -20,7 +20,7 @@
     </view>
     <van-dialog use-slot show="{{showConfirm}}" show-cancel-button bindclose="handleProxy" bindconfirm="handleProxy" title="提示" data-eventid="{{'5'}}" data-comkey="{{$k}}" class="_van-dialog data-v-20471c8d">
       <view class="_div data-v-20471c8d dialog-container"> 我已阅读并同意 <label style="color: #E61F1C" class="_span data-v-20471c8d">《需求发布协议》</label>
-        <view class="_p data-v-20471c8d"> 红哨子社区微心愿”提交的信息中所涉及的内容描述、文件、证件及其有关附件是真实有效的，复印件与原件是一致的，并对因提交材料虚假所引发的一切后果承担全部法律责任。 </view>
+        <view class="_p data-v-20471c8d"> 红哨子社区对接平台”提交的信息中所涉及的内容描述、文件、证件及其有关附件是真实有效的，复印件与原件是一致的，并对因提交材料虚假所引发的一切后果承担全部法律责任。 </view>
       </view>
     </van-dialog>
     <van-popup show="{{showRegion}}" position="bottom" bindclose="handleProxy" data-eventid="{{'7'}}" data-comkey="{{$k}}" class="_van-popup data-v-20471c8d">

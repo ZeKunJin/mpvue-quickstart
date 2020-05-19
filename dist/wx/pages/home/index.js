@@ -985,9 +985,9 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     },
     attrs: {
       "id": "map",
-      "scale": 8,
-      "longitude": 106.26667,
-      "latitude": 38.46667,
+      "scale": _vm.scaleVal,
+      "longitude": _vm.setData.longitude,
+      "latitude": _vm.setData.latitude,
       "markers": _vm.markers,
       "show-location": "",
       "eventid": '3'

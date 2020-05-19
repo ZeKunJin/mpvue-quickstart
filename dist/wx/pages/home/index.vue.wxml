@@ -24,7 +24,7 @@
       <view class="_div data-v-2233f662 del-icon" bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}">
         <van-icon name="cross" color="#fff" size="16" class="_van-icon data-v-2233f662"></van-icon>
       </view>
-    </view> <map id="map" scale="{{8}}" longitude="{{106.26667}}" latitude="{{38.46667}}" markers="{{markers}}" bindcallouttap="handleProxy" bindmarkertap="handleProxy" bindregionchange="handleProxy" bindend="handleProxy" bindtap="handleProxy" show-location style="position: absolute; top: 132px; bottom: 0; width: 100vw; height: calc(100vh - 132px)" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_map data-v-2233f662"></map>
+    </view> <map id="map" scale="{{scaleVal}}" longitude="{{setData.longitude}}" latitude="{{setData.latitude}}" markers="{{markers}}" bindcallouttap="handleProxy" bindmarkertap="handleProxy" bindregionchange="handleProxy" bindend="handleProxy" bindtap="handleProxy" show-location style="position: absolute; top: 132px; bottom: 0; width: 100vw; height: calc(100vh - 132px)" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_map data-v-2233f662"></map>
     <view class="_div data-v-2233f662 locate-tool" bindtap="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}">
       <image src="/static/icon/locate.png" class="_img data-v-2233f662 icon"></image>
     </view>

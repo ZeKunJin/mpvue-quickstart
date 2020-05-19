@@ -6569,7 +6569,7 @@ module.exports = { "default": __webpack_require__(91), __esModule: true };
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_request__ = __webpack_require__(1);
 
 
-var baseURL = "https://test.api.fy.zhengdaoyixing.com";
+var baseURL = "https://api.fy.zhengdaoyixing.com";
 
 var typeList = function typeList(params) {
   return __WEBPACK_IMPORTED_MODULE_0__utils_request__["a" /* default */].get('/demand/typeList', params, { baseURL: baseURL });
@@ -6689,7 +6689,7 @@ if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_request__ = __webpack_require__(1);
 
 
-var baseURL = "https://test.api.fy.zhengdaoyixing.com";
+var baseURL = "https://api.fy.zhengdaoyixing.com";
 
 // 创建组织
 var create = function create(data) {
@@ -6783,7 +6783,7 @@ module.exports = function (it) {
 
 
 
-var baseURL = "https://test.api.fy.zhengdaoyixing.com";
+var baseURL = "https://api.fy.zhengdaoyixing.com";
 
 // 获取验证码
 var verify = function verify(params) {
@@ -11270,7 +11270,7 @@ module.exports = function (it) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_request__ = __webpack_require__(1);
 
 
-var baseURL = "https://test.api.fy.zhengdaoyixing.com";
+var baseURL = "https://api.fy.zhengdaoyixing.com";
 
 // 登陆
 var login = function login(data) {
@@ -11917,7 +11917,7 @@ module.exports = { "default": __webpack_require__(130), __esModule: true };
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_request__ = __webpack_require__(1);
 
 
-var baseURL = "https://test.api.fy.zhengdaoyixing.com";
+var baseURL = "https://api.fy.zhengdaoyixing.com";
 
 var adList = function adList(params) {
   return __WEBPACK_IMPORTED_MODULE_0__utils_request__["a" /* default */].get('/banner/list', params, { baseURL: baseURL });
@@ -11939,7 +11939,7 @@ var adInfo = function adInfo(params) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_request__ = __webpack_require__(1);
 
 
-var baseURL = "https://test.api.fy.zhengdaoyixing.com";
+var baseURL = "https://api.fy.zhengdaoyixing.com";
 
 // 留言列表
 var commentList = function commentList(params) {
@@ -12024,7 +12024,7 @@ if (false) {(function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_request__ = __webpack_require__(1);
 
 
-var baseURL = "https://test.api.fy.zhengdaoyixing.com";
+var baseURL = "https://api.fy.zhengdaoyixing.com";
 
 var regionInfo = function regionInfo(params) {
   return __WEBPACK_IMPORTED_MODULE_0__utils_request__["a" /* default */].get('/region/regionInfo', params, { baseURL: baseURL });

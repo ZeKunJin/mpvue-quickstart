@@ -650,7 +650,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     staticStyle: {
       "color": "#E61F1C"
     }
-  }, [_vm._v("《需求发布协议》")]), _vm._v(" "), _c('p', [_vm._v("\n        红哨子社区微心愿”提交的信息中所涉及的内容描述、文件、证件及其有关附件是真实有效的，复印件与原件是一致的，并对因提交材料虚假所引发的一切后果承担全部法律责任。\n      ")])], 1)]), _vm._v(" "), _c('van-popup', {
+  }, [_vm._v("《需求发布协议》")]), _vm._v(" "), _c('p', [_vm._v("\n        红哨子社区对接平台”提交的信息中所涉及的内容描述、文件、证件及其有关附件是真实有效的，复印件与原件是一致的，并对因提交材料虚假所引发的一切后果承担全部法律责任。\n      ")])], 1)]), _vm._v(" "), _c('van-popup', {
     attrs: {
       "show": _vm.showRegion,
       "position": "bottom",

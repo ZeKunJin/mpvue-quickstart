@@ -50,9 +50,9 @@
 
     <map
       id="map"
-      :scale="8"
-      :longitude="106.26667"
-      :latitude="38.46667"
+      :scale="scaleVal"
+      :longitude="setData.longitude"
+      :latitude="setData.latitude"
       :markers="markers"
       @callouttap="onTapMarker"
       @markertap="onTapMarker"

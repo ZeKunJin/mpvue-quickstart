@@ -364,7 +364,7 @@ var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _
     staticClass: "desc"
   }, [_vm._v("\n        欢迎来到\n      ")]), _vm._v(" "), _c('div', {
     staticClass: "name"
-  }, [_vm._v("\n        社区微心愿\n      ")])])
+  }, [_vm._v("\n        社区对接平台\n      ")])])
 }]
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
