@@ -1,3 +1,0 @@
-<template name="281da4b5">
-  <van-uploader accept="{{accept}}" preview-image file-list="{{files}}" max-count="{{max}}" bindafterRead="handleProxy" binddelete="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_van-uploader data-v-a2775636"></van-uploader>
-</template>

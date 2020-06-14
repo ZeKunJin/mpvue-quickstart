@@ -1,5 +1,0 @@
-@import "../../../common/vendor.wxss";
-
-.img.data-v-2db926f4 {
-  width: 100vw;
-}

@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "评论",
-  "usingComponents": {
-    "van-uploader": "/static/vant/uploader/index"
-  }
-}

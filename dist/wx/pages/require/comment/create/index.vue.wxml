@@ -1,4 +1,0 @@
-<import src="/components/Uploader/index.vue.wxml" /><template name="453bed89">
-  <view class="_div data-v-24e07359 create-comment">
-    <view class="_div data-v-24e07359 publish"><label bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_span data-v-24e07359">发布</label></view>
-    <view class="_div data-v-24e07359 text-input"><textarea value="{{text}}" placeholder="请输入文本" bindinput="handleProxy" auto-focus style="padding: 10px" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_textarea data-v-24e07359" /></view> <view class="_div data-v-24e07359 file-upload"><template bindafterRead="handleProxy" binddelete="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'0'], $root}}" is="281da4b5"></template></view></view></template>

@@ -1,8 +1,0 @@
-<template name="9e98deba">
-  <view class="_div data-v-2726a8d3 container">
-    <view style="font-size: 20px; font-weight: 500" class="_div data-v-2726a8d3"> 需求发布协议 </view>
-    <view class="_div data-v-2726a8d3 text">
-      <view class="_p data-v-2726a8d3"> 红哨子社区对接平台”提交的信息中所涉及的内容描述、文件、证件及其有关附件是真实有效的，复印件与原件是一致的，并对因提交材料虚假所引发的一切后果承担全部法律责任。 </view>
-    </view>
-  </view>
-</template>

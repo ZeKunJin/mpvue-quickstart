@@ -1,21 +1,35 @@
-export function countdown (obj) {
-  const TIME_COUNT = 60
-  if (!obj.timer) {
-    obj.waitTime = TIME_COUNT
-    obj.canGet = false
-    obj.timer = setInterval(() => {
-      if (obj.waitTime > 0 && obj.waitTime <= TIME_COUNT) {
-        obj.waitTime--
-      } else {
-        obj.canGet = true
-        clearInterval(obj.timer)
-        obj.timer = null
-      }
-    }, 1000)
-  }
-  return {
-    timer: obj.timer,
-    canGet: obj.canGet,
-    waitTime: obj.waitTime
-  }
+function formatNumber (n) {
+  const str = n.toString()
+  return str[1] ? str : `0${str}`
+}
+
+export function formatTime (date) {
+  const year = date.getFullYear()
+  const month = date.getMonth() + 1
+  const day = date.getDate()
+
+  const hour = date.getHours()
+  const minute = date.getMinutes()
+  const second = date.getSeconds()
+
+  const t1 = [year, month, day].map(formatNumber).join('/')
+  const t2 = [hour, minute, second].map(formatNumber).join(':')
+
+  return `${t1} ${t2}`
+}
+
+export function formatDate (dat) {
+  var date = new Date(dat)
+  const year = date.getFullYear()
+  const month = date.getMonth() + 1
+  const day = date.getDate()
+
+  const t1 = [year, month, day].map(formatNumber).join('-')
+  return t1
+}
+
+export default {
+  formatNumber,
+  formatTime,
+  formatDate
 }

@@ -1,38 +1,27 @@
 import Fly from 'flyio/dist/npm/wx'
 import store from '@/store'
-import navigate from '@/utils/navigate'
+import { API_CODE } from '@/config'
 
-const request = new Fly()
+const fly = new Fly()
 
-request.interceptors.request.use((request) => {
+fly.interceptors.request.use(request => {
   request.headers['AUTH-TOKEN'] = store.getters.token
-  wx.showNavigationBarLoading()
   return request
 })
 
-request.interceptors.response.use(
+fly.interceptors.response.use(
   (response, promise) => {
-    wx.hideNavigationBarLoading()
     return promise.resolve(response.data)
   },
-  async (err, promise) => {
-    wx.hideNavigationBarLoading()
 
-    const res = err.response.data
-    const code = res.code
+  (err, promise) => {
+    console.log(err)
+    const code = 500
 
-    if (code === 1502 || code === 1503) {
-      await store.dispatch('user/logout')
-      navigate.to('/pages/login/index')
-    } else {
-      wx.showToast({
-        title: res.message,
-        icon: 'none'
-      })
-    }
+    console.log(API_CODE[code])
 
     return promise.reject()
   }
 )
 
-export default request
+export default fly

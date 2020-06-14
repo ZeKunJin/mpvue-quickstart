@@ -1,4 +1,4 @@
-# 红哨子-mpvue
+# mpvue-quickstart
 
 > A Mpvue project
 

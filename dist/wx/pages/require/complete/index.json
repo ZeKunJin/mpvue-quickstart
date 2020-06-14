@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "我要对接",
-  "usingComponents": {
-    "van-button": "/static/vant/button/index",
-    "van-icon": "/static/vant/icon/index"
-  }
-}
