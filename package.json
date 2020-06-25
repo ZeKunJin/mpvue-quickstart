@@ -12,10 +12,11 @@
   },
   "dependencies": {
     "flyio": "^0.6.14",
+    "less": "^3.11.3",
+    "less-loader": "^6.1.2",
     "mpvue": "^2.0.0",
     "mpvue-router-patch": "^2.0.0",
     "mpvue-wxparse": "^0.6.5",
-    "node-sass": "^4.13.1",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
@@ -54,7 +55,6 @@
     "mpvue-router-patch": "^2.0.0",
     "mpvue-template-compiler": "^2.0.0",
     "mpvue-webpack-target": "^1.0.3",
-    "node-sass": "^4.13.1",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "ora": "^2.0.0",
     "portfinder": "^1.0.13",
@@ -64,7 +64,6 @@
     "px2rpx-loader": "^0.1.10",
     "relative": "^3.0.2",
     "rimraf": "^2.6.0",
-    "sass-loader": "^7.3.1",
     "semver": "^5.3.0",
     "shelljs": "^0.8.1",
     "uglifyjs-webpack-plugin": "^1.2.5",
